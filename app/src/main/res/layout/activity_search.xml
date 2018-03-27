@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgoruund2"
+    >
+
+    <RelativeLayout
+        android:id="@+id/diet_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        >
+        <TextView
+            android:id="@+id/diet_textview"
+
+            android:textSize="15sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="80dp"
+            android:text="Diet Restriction"
+            android:textColor="#6ce3ec"
+
+            />
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="11dp"
+            app:srcCompat="?attr/actionModeCloseDrawable" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/serving_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/diet_layout"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="15dp"
+        >
+
+        <TextView
+            android:id="@+id/serving_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Serving Restriction"
+            android:textColor="#6ce3ec"
+            android:textSize="15sp"/>
+
+        <Spinner
+            android:id="@+id/serving_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="30dp"
+            android:layout_toEndOf="@id/serving_textview"
+            android:background="@android:drawable/btn_dropdown"
+            android:entries="@android:color/holo_red_light"
+            android:spinnerMode="dropdown" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/serving_layout"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="60dp"
+        android:id="@+id/relativeLayout">
+        <TextView
+            android:id="@+id/preptime_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Preparation Time"
+            android:textColor="#6ce3ec"
+            android:textSize="15sp"/>
+
+        <Spinner
+            android:id="@+id/preptime_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="30dp"
+            android:layout_toEndOf="@id/preptime_textview"
+            android:background="@android:drawable/btn_dropdown"
+            android:entries="@android:color/holo_red_light"
+            android:spinnerMode="dropdown" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/search_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="60dp"
+        android:onClick="onClick"
+        android:text="Search"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <Spinner
+        android:id="@+id/diet_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_above="@+id/serving_layout"
+        android:layout_alignEnd="@+id/relativeLayout"
+        android:background="@android:drawable/btn_dropdown"
+        android:entries="@android:color/holo_red_light"
+        android:spinnerMode="dropdown" />
+
+</RelativeLayout>
+
